@@ -1,7 +1,7 @@
 {
     "headers": [
         {
-            "source": "/api/(.*)",
+            "source": "https://pass-op-backend-production.up.railway.app/api/(.*)",
             "headers": [
                 {
                     "key": "Access-Control-Allow-Credentials",
