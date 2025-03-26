@@ -30,13 +30,11 @@ const Passwords = ({ isEditing, setIsEditing, setPasswordToBeEdited, allPassword
                 Authorization: `Bearer ${token}`,
             },
             body: JSON.stringify(password),
-            mode: 'no-cors'
         });
         const response1 = await fetch(`${backendURL}/api/get-passwords`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
-            mode: 'no-cors'
         });
         const data = await response1.json()
         setPasswords(data)
