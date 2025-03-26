@@ -22,11 +22,12 @@ const Main = () => {
             const token = await getToken()
             const backendURL = import.meta.env.VITE_BACKEND_URL;
             console.log(`${backendURL}/api/get-passwords`);
-            
+
             const response = await fetch(`${backendURL}/api/get-passwords`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
-                }
+                },
+                credentials: "include", // If you need cookies/tokens
             });
             const res = await response.json()
             setPasswords(res)
