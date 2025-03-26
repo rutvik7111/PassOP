@@ -26,6 +26,7 @@ const PasswordManager = ({ setIsEditing, isEditing, passwordToBeEdited, setAllPa
                         Authorization: `Bearer ${token}`,
                     },
                     body: JSON.stringify(data),
+                    mode: 'no-cors'
                 });
                 toast("Password saved successfully.")
             } else {
@@ -37,6 +38,7 @@ const PasswordManager = ({ setIsEditing, isEditing, passwordToBeEdited, setAllPa
                         Authorization: `Bearer ${token}`,
                     },
                     body: JSON.stringify({ ...passwordToBeEdited, ...data }),
+                    mode: 'no-cors'
                 });
                 setIsEditing(false)
                 toast("Password details updated successfully.")
@@ -45,7 +47,8 @@ const PasswordManager = ({ setIsEditing, isEditing, passwordToBeEdited, setAllPa
             const response1 = await fetch(`${backendURL}/api/get-passwords`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
-                }
+                },
+                mode: 'no-cors'
             });
             const res = await response1.json()
             setPasswords(res)

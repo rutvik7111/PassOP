@@ -18,7 +18,8 @@ function App() {
         const response = await fetch(`${backendURL}/api/get-theme`, {
           headers: {
             Authorization: `Bearer ${token}`,
-          }
+          },
+          mode: 'no-cors'
         });
         const { theme } = await response.json()
         setTheme(theme)
@@ -42,6 +43,7 @@ function App() {
         const backendURL = import.meta.env.VITE_BACKEND_URL;
         const response = await fetch(`${backendURL}/api/set-theme`, {
           method: "POST",
+          mode: 'no-cors',
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,

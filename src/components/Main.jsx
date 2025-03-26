@@ -24,7 +24,8 @@ const Main = () => {
             const response = await fetch(`${backendURL}/api/get-passwords`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
-                }
+                },
+                mode: 'no-cors'
             });
             const res = await response.json()
             setPasswords(res)
