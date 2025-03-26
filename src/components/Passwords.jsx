@@ -22,7 +22,7 @@ const Passwords = ({ isEditing, setIsEditing, setPasswordToBeEdited, allPassword
 
     async function handleDelete(password) {
         const token = await getToken()
-        const response = await fetch("http://localhost:3000/api/delete-password", {
+        const response = await fetch(`${process.env.BASE_URL}/api/delete-password`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -30,7 +30,7 @@ const Passwords = ({ isEditing, setIsEditing, setPasswordToBeEdited, allPassword
             },
             body: JSON.stringify(password),
         });
-        const response1 = await fetch("http://localhost:3000/api/get-passwords", {
+        const response1 = await fetch(`${process.env.BASE_URL}/api/get-passwords`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             }

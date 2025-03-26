@@ -21,7 +21,7 @@ const Main = () => {
         (async function () {
             const token = await getToken()
 
-            const response = await fetch("http://localhost:3000/api/get-passwords", {
+            const response = await fetch(`${process.env.BASE_URL}/api/get-passwords`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 }
