@@ -14,7 +14,7 @@ function App() {
     if (isLoaded && isSignedIn) {
       (async function () {
         const token = await getToken()
-        const response = await fetch(`${process.env.BASE_URL}/api/get-theme`, {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/get-theme`, {
           headers: {
             Authorization: `Bearer ${token}`,
           }
@@ -38,7 +38,7 @@ function App() {
     if (theme && isLoaded && isSignedIn) {
       (async function () {
         const token = await getToken()
-        const response = await fetch(`${process.env.BASE_URL}/api/set-theme`, {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/set-theme`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
