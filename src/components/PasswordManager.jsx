@@ -18,7 +18,7 @@ const PasswordManager = ({ setIsEditing, isEditing, passwordToBeEdited, setAllPa
         const token = await getToken()
         if (passwords.filter(elem => elem.site === data.site && elem.username === data.username).length === 0 || isEditing) {
             if (!isEditing) {
-                const backendURL = import.meta.env.REACT_APP_BACKEND_URL;
+                const backendURL = import.meta.env.VITE_BACKEND_URL;
                 const response = await fetch(`${backendURL}/api/add-password`, {
                     method: "POST",
                     headers: {
@@ -29,7 +29,7 @@ const PasswordManager = ({ setIsEditing, isEditing, passwordToBeEdited, setAllPa
                 });
                 toast("Password saved successfully.")
             } else {
-                const backendURL = import.meta.env.REACT_APP_BACKEND_URL;
+                const backendURL = import.meta.env.VITE_BACKEND_URL;
                 const response = await fetch(`${backendURL}/api/update-password`, {
                     method: "PUT",
                     headers: {
@@ -41,7 +41,7 @@ const PasswordManager = ({ setIsEditing, isEditing, passwordToBeEdited, setAllPa
                 setIsEditing(false)
                 toast("Password details updated successfully.")
             }
-            const backendURL = import.meta.env.REACT_APP_BACKEND_URL;
+            const backendURL = import.meta.env.VITE_BACKEND_URL;
             const response1 = await fetch(`${backendURL}/api/get-passwords`, {
                 headers: {
                     Authorization: `Bearer ${token}`,

@@ -20,7 +20,7 @@ const Main = () => {
     useEffect(() => {
         (async function () {
             const token = await getToken()
-            const backendURL = import.meta.env.REACT_APP_BACKEND_URL;
+            const backendURL = import.meta.env.VITE_BACKEND_URL;
             const response = await fetch(`${backendURL}/api/get-passwords`, {
                 headers: {
                     Authorization: `Bearer ${token}`,
