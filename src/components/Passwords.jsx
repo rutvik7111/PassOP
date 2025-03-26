@@ -22,7 +22,8 @@ const Passwords = ({ isEditing, setIsEditing, setPasswordToBeEdited, allPassword
 
     async function handleDelete(password) {
         const token = await getToken()
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/delete-password`, {
+        const backendURL = import.meta.env.VITE_BACKEND_URL;
+        const response = await fetch(`${backendURL}/api/delete-password`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
@@ -30,7 +31,7 @@ const Passwords = ({ isEditing, setIsEditing, setPasswordToBeEdited, allPassword
             },
             body: JSON.stringify(password),
         });
-        const response1 = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/get-passwords`, {
+        const response1 = await fetch(`${backendURL}/api/get-passwords`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             }
