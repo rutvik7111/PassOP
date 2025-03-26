@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+.green {
+    @apply text-green-500
+}
+
+.bgGreen {
+    @apply bg-green-500
+}
+
+.input {
+    @apply bg-white outline outline-green-500 dark:outline-0 rounded-full p-1 px-4 focus-within:outline-black focus-within:outline-2 placeholder-black
+}
+
+.darkMode {
+    @apply text-white 
+}
