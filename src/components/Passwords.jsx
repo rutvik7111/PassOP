@@ -22,7 +22,7 @@ const Passwords = ({ isEditing, setIsEditing, setPasswordToBeEdited, allPassword
 
     async function handleDelete(password) {
         const token = await getToken()
-        const backendURL = import.meta.env.VITE_BACKEND_URL;
+        const backendURL = import.meta.env.REACT_APP_BACKEND_URL;
         const response = await fetch(`${backendURL}/api/delete-password`, {
             method: "DELETE",
             headers: {
