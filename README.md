@@ -3,7 +3,7 @@
 Passop is a secure and efficient **Password Manager** built using the **MERN stack**. It allows users to store, manage, and retrieve their passwords safely. The app uses **Clerk for authentication**, **Crypto for encryption**, and features a clean, responsive UI with **Tailwind CSS**.
 
 ## 🔗 Live Project Link
-https://get-me-chai-indol.vercel.app/
+https://pass-op-phi.vercel.app/
 
 ## 🚀 Features
 
