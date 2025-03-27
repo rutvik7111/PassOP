@@ -10,8 +10,8 @@ const Navbar = () => {
     const { setTheme } = useContext(ThemeContext)
 
     return (
-        <nav className={'sticky z-10 top-0 flex justify-between px-5 md:px-22 lg:px-10 xl:px-40 items-center p-2 bg-slate-800 dark:bg-slate-700'}>
-            <div className='flex items-center gap-7.5'>
+        <nav className={'sticky z-10 top-0 flex justify-between px-2 min-[400px]:px-5 md:px-22 lg:px-10 xl:px-40 items-center p-2 bg-slate-800 dark:bg-slate-700'}>
+            <div className='flex items-center gap-3 min-[400px]:gap-7.5'>
                 <Link to="/">
                     <h1 className='font-bold text-white text-2xl'>
                         <span className='green'>&lt;</span>
@@ -42,9 +42,9 @@ const Navbar = () => {
                 </SignedIn>
                 <SignedOut>
                     <SignInButton>
-                        <button className="relative flex items-center gap-2 px-7 py-2 text-white font-semibold rounded-full bg-gradient-to-r transition-all duration-300 hover:scale-105 cursor-pointer">
-                            <FiLogIn size={20} />
-                            Sign In
+                        <button className="relative flex items-center gap-2 px-3 sm:px-7 py-2 text-white font-semibold rounded-full bg-gradient-to-r transition-all duration-300 hover:scale-105 cursor-pointer">
+                            <FiLogIn className='text-[15px] sm:text-[20px]' />
+                            <span className='max-sm:text-sm'>Sign In</span>
                             <span className="absolute inset-0 rounded-full bg-white opacity-15"></span>
                         </button>
                     </SignInButton>
