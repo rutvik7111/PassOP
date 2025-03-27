@@ -27,3 +27,9 @@ https://pass-op-phi.vercel.app/
 - **State Management**: React Context API
 - **Form Handling**: React Hook Form
 - **Notifications**: React Toastify
+
+## 🚀 Deployment
+
+- **Frontend**: Deployed on **Vercel**
+- **Backend**: Deployed on **Railway**
+- **Database**: Hosted on **MongoDB Atlas**
