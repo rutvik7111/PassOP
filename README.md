@@ -1,13 +1,29 @@
-<<<<<<< HEAD
-# PassOP
-A full-stack password manager built with the MERN stack, designed to securely store and manage your passwords.
-=======
-# React + Vite
+# Passop - Password Manager (MERN Stack)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Passop is a secure and efficient **Password Manager** built using the **MERN stack**. It allows users to store, manage, and retrieve their passwords safely. The app uses **Clerk for authentication**, **Crypto for encryption**, and features a clean, responsive UI with **Tailwind CSS**.
 
-Currently, two official plugins are available:
+## 🔗 Live Project Link
+https://get-me-chai-indol.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
->>>>>>> 77a15de4c91985db9df055489303e4c10e490183
+## 🚀 Features
+
+✅ **Authentication**: Google, GitHub, and Email/Mobile sign-in using **Clerk**  
+✅ **Secure Storage**: Passwords are encrypted before being saved in **MongoDB**  
+✅ **Real-time Validation**: Inputs validated using **React Hook Form**  
+✅ **CRUD Operations**: Users can **create, edit, delete, and copy** stored passwords  
+✅ **Protected Routes**: Only logged-in users can access and manage passwords  
+✅ **Responsive UI**: Fully responsive with a scrollable table on smaller screens  
+✅ **Dark Mode**: Supports light/dark mode for better user experience  
+✅ **Search & Filter**: Quickly find saved passwords  
+✅ **User-friendly Notifications**: Success/error messages using **Toastify**  
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React, Tailwind CSS
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB (Mongoose ODM)
+- **Authentication**: Clerk
+- **Encryption**: Crypto (AES encryption for password security)
+- **State Management**: React Context API
+- **Form Handling**: React Hook Form
+- **Notifications**: React Toastify
