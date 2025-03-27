@@ -42,7 +42,6 @@ function App() {
         const backendURL = import.meta.env.VITE_BACKEND_URL;
         const response = await fetch(`${backendURL}/api/set-theme`, {
           method: "POST",
-          credentials: "include", // If you need cookies/tokens
           headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,

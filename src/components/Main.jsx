@@ -27,7 +27,6 @@ const Main = () => {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
-                credentials: "include", // If you need cookies/tokens
             });
             const res = await response.json()
             setPasswords(res)
